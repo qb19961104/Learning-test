@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var regexp=/^1[3-9]\d{9}$/;
+	var input='15810204882'
+	console.log(regexp.test(input));
+	var reg=/abc/;
+ 	// var reg=new RegExp("abc");
+ 	var str="1234578sba";
+ 	console.log(reg.test(str));	
+
+ 	console.log(/abc/.test("asdsabc"));
+
+ 	var str1="<a href=''>baidu</a><a href=''>搜狐</a>"
+ 	var reg1=/<a href=''>(.+?)<\/a>/g;
+ 	//正则表达式贪婪模式，懒惰模式
+ 	var result=reg1.exec(str1);
+ 	console.log(result);
+ 	var result1=str1.match(reg1);
+ 	console.log(result1);
+	</script>
+</body>
+</html>

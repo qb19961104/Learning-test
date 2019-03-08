@@ -1,0 +1,19 @@
+.kuang>li>ul>li>ul>li{
+   border: 2px solid red;
+}
+/*.kuang>li ul li{
+	 border: 2px solid green;
+}*/
+.kuang>li{
+	border: 2px solid blue;
+}
+/*属性的继承性：
+具有继承的属性：背景，字体，大小，颜色
+不具有继承性的：属性边框，padding，margin*/
+.kuang ul{
+	display: none;         /*完全看不到*/
+	/*visibility: hidden;	*/		/*内容看不到 位置保留*/
+}
+.kuang li:hover >ul{
+	display: block;
+}

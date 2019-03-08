@@ -1,0 +1,51 @@
+.box1{
+	width: 300px;
+	height: 100px;
+	background: red;
+	float: left;
+}
+.box2{
+	width: 600px;
+	height: 100px;
+	background: blue;
+	float: left;
+}
+.box3{
+	width: 700px;
+	height: 100px;
+	background: pink;
+	float: left;
+}
+.box4{
+	width: 900px;
+	height: 100px;
+	background: green;
+	float: left;
+}
+.span1{
+	background: #ccc；
+}
+.span2{
+	background: #eee；
+}
+.box{
+	width: 400px;
+	height: 100px;
+	background: blue;
+	float: left;
+}
+.fu1{
+	width: 200px;
+	height: 200px;
+	background: red;
+	position: absolute;
+	right: 200px;
+	top: 20px;
+}
+.fu{
+	width: 300px;
+	height: 300px;
+	background: green;
+	position: absolute;
+	right: 300px;
+}

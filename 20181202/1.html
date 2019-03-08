@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- 	<h1 id="alink" title="getAttribute" onclick="getAttr(this)">点击我，获取标签属性值</h1> -->
+	<h2 id="alink" title="getAttribute" onclick="setAttr(this)">点击我，变色</h2>
+
+	<script>
+	// function getAttr(qiaobing){
+	// 	var node=document.getElementById("alink");
+	// 	var attr1=node.getAttribute("id");
+	// 	var attr2=node.getAttribute("title");
+	// 	document.write("h1标签的ID:"+qiaobing.id+"<br>");
+	// 	document.write("h1标签的title:"+qiaobing.title);
+	// }
+	 function x(){
+	 	 var a=parseInt(Math.random()*256);
+	 	 var b=parseInt(Math.random()*256);
+	 	 var c=parseInt(Math.random()*256);
+	 	 return(a+","+b+","+c);
+	 }
+
+	 function setAttr(qiaobing){
+	 	qiaobing.setAttribute("style","color:rgb("+x()+");");
+	 }
+	</script>
+
+
+
+	<div id="text">
+		<p id="con">parentNode 获取指定节点的父节点</p>
+		<span></span>
+	</div>
+	<script>
+		var node=document.getElementById("con");
+		console.log(node.parentNode.nodeName);
+	</script>
+
+
+	<div id="text1">
+		<p id="x1">HTML</p>
+		<p id="x2">CSS</p>
+		<p id="con">parentNode 获取指定节点的父节点</p>
+	</div>
+	<script>
+	var node=document.getElementById("text1");
+	var newnode=document.createElement("p");
+	newnode.innerHTML="<font color=#f00;>abc</font>";
+	node.appendChild(newnode);
+	console.log(node.innerHTML);
+	// node.removeChild(x2);
+	var oldnew=document.getElementById("con");
+	node.replaceChild(newnode.oldnew)
+	</script>
+
+
+	<script>
+	var element=document.createElement("div");
+	element.className="message";
+	var textNode=document.createTextNode("hello word");
+	element.appendChild(textNode);
+	document.body.appendChild(element);
+	</script>
+</body>
+</html>

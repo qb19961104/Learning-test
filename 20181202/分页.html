@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分页</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-size: 0
+		}
+		ul{
+			list-style: none;
+		}
+		#u1>li{
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			text-align: center;
+			line-height: 30px;
+			font-size: 15px;
+		}
+		#u2{
+			position: relative;
+		}
+		#u2>li{
+			width: 500px;
+			height: 300px;
+			position:absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			font-size: 15px;
+		}
+		.li1{background: red;}
+		.li2{background: #ff0;}		
+		.li3{background: #0f0;}
+		.li4{background: red;}
+		.li5{background: #ff0;}
+		.li6{background: #0f0;}
+	</style>
+</head>
+<body>
+	<h1>实现多标签页效果</h1>
+	<ul id="u1">
+		<li class="li1" onclick="huafei(4)">10元套餐</li>
+		<li class="li2" onclick="huafei(5)">30元套餐</li>
+		<li class="li3" onclick="huafei(6)">50元包月</li>
+	</ul>
+	<ul id="u2">
+		<li class="li4" style="display: block;">10元套餐 详情：</li>
+		<li class="li5">30元套餐 详情：</li>
+		<li class="li6">50元套餐 详情：</li>
+	</ul>
+
+	<script>
+	function huafei(n){
+		document.querySelector("#u2>li[style]").removeAttribute("style")
+		document.getElementsByClassName("li"+n) [0].style.display="block";
+	}
+	</script>
+</body>
+</html>

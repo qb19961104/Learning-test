@@ -1,0 +1,27 @@
+translate  元素根据当前位置移动  值 xy轴
+	-webkit-translate:translate(100px,100px);  IE浏览器chomre
+	-moz-translate:translate(100px,100px);   火狐浏览器
+ 
+rotate 旋转 
+	transform: rotate(30deg); 顺时针正数 逆时针负数
+	transform-originleft bottom;        设置旋转点
+
+scale  放大缩小    增加或减少元素的尺寸
+
+skew  元素反转给定的角度
+
+过渡
+	transition-property  			指定过渡属性的名称
+	transition-duration  			指定过渡持续时间
+	transition-timing-function 		指定过渡类型
+	transition-delay     			指定延迟时间 
+
+动画
+animation-name 检索或设置对象所应用的动画名称 
+animation-duration 检索或设置对象动画的持续时间 
+animation-timing-function 检索或设置对象动画的过渡类型 
+animation-delay 检索或设置对象动画延迟的时间 
+animation-iteration-count 检索或设置对象动画的循环次数   infinite  循环n次
+animation-direction 检索或设置对象动画在循环中是否反向运动   alternate
+animation-fill-mode 检索或设置对象动画时间之外的状态 
+animation-play-state 检索或设置对象动画的状态。

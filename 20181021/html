@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+首页测试地址		
+<iframe src="D:\Web\20171021\1.html" width="1000px" height="1000px" frameborder="1"></iframe>
+</body>
+</html>

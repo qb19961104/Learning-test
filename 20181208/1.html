@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var arr=[1,2,3,4,5,6,7,8];
+	function c(arr,size){
+		var arr_1=[];
+		for(var i=0;i<arr.length;i+=size){
+			arr_1.push(arr.slice(i,i+size));
+		}
+		return arr_1;
+	}
+	console.log(c(arr,2));
+	function a(arr,size){
+		var newArr=[];
+		while(arr.length>0){
+			newArr.push(arr.splice(0,size));
+		}
+		return newArr;
+	}
+	console.log(a(arr,2));
+	</script>
+</body>
+</html>

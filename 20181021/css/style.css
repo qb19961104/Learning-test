@@ -1,0 +1,103 @@
+.box{
+	width: 100px;
+	height: 200px;
+	border: 2px solid red;
+	font-size: 2em;     /*em相对大小*/   /*一个类可以有多个选择*/
+}
+#box{
+	font-size: 50px;        /*优先级： id选择器>class选择器>标签选择器>通用选择器*/
+	/*color: rgb(0,255,0);*/        /*三原色 红 绿 蓝*/    /*rgba透明度*/
+	color: #FF000;                   /* rem根据根元素设置相对大小*/
+	background: rgba(0,0,0,3);			/*em根据当前元素设置相对大小*/
+	width:90%;
+}
+body{
+	height: 1000px;
+	background-image: url("../images/1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	background-size: 100%; 
+}
+#box2{width: 35px; height:35px; 
+	background-image: url("../images/3.png");  /*图片精灵 css-sprite*/
+	background-position: -445px -145px;
+}
+/*文本对齐方式*/
+p{
+	text-indent: 32px;         /* 缩进*/
+	text-align: center;         /* 居中*/
+	letter-spacing: 2em;       /*汉字间距*/
+	text-transform: lowercase;   /*所有字母小写*/
+	text-transform: capitalize;  /*首字母大写*/
+	text-transform: uppercase;    /*所有字母大写*/
+	text-decoration: underline;    /*下划线*/
+	text-decoration: line-through;  /*贯穿线*/
+	line-height: 2em;        /*行间距*/
+	font-family: "微软雅黑";    /*设置字体样式*/
+	font-weight: 600   /*字体加粗100-900*/
+	font-style:italic;    /*字体风格斜体*/
+}   
+/*字间距*/
+#hello{
+	word-spacing: 3em;       /* 字母间距*/
+	background-color: red;
+	border: 1px;
+	height: 200px;
+	width: 300px;
+	line-height: 200px;        /*一行文字内容垂直居中*/
+}
+                 /*  white-space：pre；处理空白符*/
+table{
+	border: 1px solid red;
+	height: 400px;
+	width: 700px;
+}
+td{
+	border:1px solid red;
+}
+/*vertical-align: middle; */   /*单元格位置*/
+/*服务器端加载字体
+@font-face {
+	font-family: 'diyfont';
+	src: url('diyfont.eot'); 
+	src: url('diyfont.eot') format('embedded-opentype'), 
+		 url('diyfont.woff') format('woff'), 
+		 url('diyfont.ttf') format('truetype'),
+		 url('diyfont.svg#fontname') format('svg'); 
+}*/
+/*css列表*/
+ul{
+	list-style: square;
+}
+/*border-collapse: */
+/* 并列/过滤选择器*/
+ /* div.box 只对同时满足条件的标签产生效果
+ 一般写法：标签选择器在前，类选择器（id选择器）在后或者两个类选择器 之间不加空格*/
+
+/*父子/派生选择器  用于选择指定元素的后辈元素*/
+.parent .son1 .grandson1{
+	width: 500px;
+	height: 500px;
+	border: 1px;
+	background-color: red;
+}
+/*子选择器 用于选择指定标签元素的第一代元素*/
+.parent >.son2{
+	background-color: blue;
+}
+/*分组选择器：
+多个同样样式的标签用，隔开 同时满足条件*/  
+
+/*伪类选择符：
+hover 鼠标放上去之后所起作用的样式*/
+a{
+	text-decoration: none;
+	color: white;
+	background:red;
+	}
+a:hover {
+	background: blue;
+	font-size: 2em;
+}
+	

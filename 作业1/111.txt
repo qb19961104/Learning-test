@@ -1,0 +1,42 @@
+一：
+1.在不指定类型时，nth-child(n)选中的是父元素下的第N个子元素。nth-of-type(n)选中的是父元素下的不同类型标签的第N个。
+二：
+如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器（Adjacent sibling selector）。
+相邻兄弟选择器只对某一元素之后的第一个匹配的相邻兄弟起作用，但是普通相邻兄弟选择器对相关元素之后的所有匹配的兄弟元素都起作用
+三：
+ 盒子模型：IE盒子模型 标准盒子模型
+ content内容
+ padding填充
+ border边框
+ margin 边界 right右 lift左 top高 bottom底部
+ .box{
+ 	width: 200px;
+ 	height: 200px;
+ 	background: red;
+ 	padding-top:20px;
+ 	padding-bottom: 20px;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ 	border-top: 10px solid blue;
+ 	border-bottom: 10px solid blue;
+ 	border-left: 10px solid green;
+ 	border-right: 10px solid green;
+ 	margin-top: 20px;
+ 	margin-left: 20px;
+ie盒子模型 设置 box-sizing: border-box
+盒模型-边框
+ .box2{
+	width: 200px;
+	height: 200px;                      soild 实线
+	border:2px;                 		dotted 点线
+	border-style: dashed;              dashed 虚线
+	border-top: solid red 50px;      transparent 透明
+	border-radius:0 50% 0 50%;        		弧线边框  
+ }
+边距合并：
+margin上下外边距合并：第一个盒子下边框与第二个盒子的上边框的距离取最大值，左右不合并
+解决父子元素合并：通过伪类before在第一个子类前设置table-cell  设置boder-top  设置padding-top 设置over-flow  父元素设置disp-inblock   父元素设置浮动float-left  父元素设置边框
+  
+如果父元素使用magin-top 第一个子元素也是用margin-top  第一个子元素跟随父元素  以后不跟随
+行内元素不能设置高度 margin-top margin-bottom 但是可以设置margin-left margin-right
+可以设置四个方向的padding

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>36边型</title>
+	<style>
+		.box, .box div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin: 80px auto;
+			position: relative;
+			transform: rotate(30deg);
+		}
+		.box:before, .box div:before {
+			content: '';
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: red;
+			transform: rotate(20deg);
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+		.box:after, .box div:after {
+			content: '';
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: red;
+			transform: rotate(10deg);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>
+			<div></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background: red;
+			animation: mymove;
+			animation-duration :2s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate; 
+			animation-delay: 2s;
+			animation-timing-function:ease-in-out;	
+		}
+	/*	定义动画规则*/
+		@keyframes mymove{	
+			0% {transform: translateX(0);}
+			25% {transform: translateX(600px);background: blue;}
+			50% {transform: translate(600px,400px);background: green;}
+			75% {transform: translateY(400px);background: #111;}
+			100% {transform: translate(0);}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	</div>
+</body>
+</html>

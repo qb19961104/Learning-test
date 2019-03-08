@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>切换</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		img{
+			width: 100%;
+			position: fixed;
+			z-index: 1;
+		}
+		#slider{
+			width: 100%;
+			position: absolute;
+			z-index:99;
+			bottom: 100px;
+			text-align: center;
+		}
+		#slider li{
+			list-style: none;
+			display: inline-block;
+			text-align: center;
+		}
+		#slider li a{
+			display: inline-block;
+			width: 170px;
+			border: solid 5px #fff;
+			margin-right: 30px;
+			padding-top: 70px;
+			padding-bottom: 30px;
+			text-decoration: none;
+			color: #fff
+		}
+		#slider>li:nth-child(1)>a:before{
+			content:'';
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: blue;
+			border-radius: 100%;
+			opacity:0.5;
+			background: url(images/sbg1.jpg) center no-repeat;
+			position: absolute;
+			top: -50%;
+			left: 23%;
+		}
+		#slider>li:nth-child(2)>a:before{
+			content:'';
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: blue;
+			border-radius: 100%;
+			opacity:0.5;
+			background: url(images/sbg2.jpg)center no-repeat;
+			position: absolute;
+			top: -50%;
+			left: 23%;
+		}	
+		#slider>li:nth-child(3)>a:before{
+			content:'';
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: blue;
+			border-radius: 100%;
+			opacity:0.5;
+			background: url(images/sbg3.jpg)center no-repeat;
+			position: absolute;
+			top: -50%;
+			left: 23%;
+		}	
+		#slider>li:nth-child(4)>a:before{
+			content:'';
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: blue;
+			border-radius: 100%;
+			opacity:0.5;
+			background: url(images/sbg4.jpg)center no-repeat;
+			position: absolute;
+			top: -50%;
+			left: 23%;
+		}	
+		#slider>li:nth-child(5)>a:before{
+			content:'';
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: blue;
+			border-radius: 100%;
+			opacity:0.5;
+			background: url(images/sbg5.jpg)center no-repeat;
+			position: absolute;
+			top: -50%;
+			left: 23%;
+		}
+		#slider li>nth-child(1):hover{
+			background: url(images/sbg1.jpg) center no-repeat;
+		}	
+		.img:target{
+			z-index: 10;
+		}
+		.img:not(:target){
+			animation: notTarget 1s;
+		}
+		@keyframes notTarget {
+			from{z-index:3;}
+			to{z-index:7;}
+		} 
+		#slider>li:nth-child(1)>a{
+			background: red;
+			position:relative;
+
+		}
+		#slider>li:nth-child(2)>a{
+			background: blue;
+			position:relative;
+		}
+		#slider>li:nth-child(3)>a{
+			background: green;
+			position:relative;
+		}
+		#slider>li:nth-child(4)>a{
+			background: black;
+			position:relative;
+		}
+		#slider>li:nth-child(5)>a{
+			background: yellow;
+			position:relative;
+		}
+		.moveleft:target{
+			animation: myleft 2s;
+		}
+		@keyframes myleft{
+			from{transform: translateX(800px);}
+			to{transform: translateX(0);}
+		}
+		.movetop:target{
+			animation: mytop 2s;
+		}
+		@keyframes mytop{
+			from{transform: translateY(800px);}
+			to{transform: translateY(0);}
+		}
+		.zoomout:target{
+			animation: myzoomout 2s;
+		}
+		@keyframes myzoomout{
+			from{transform:none;}
+			to{transform-scale(2)}
+		}
+		.zoomin:target{
+			animation: myzoomin 2s;
+		}
+		@keyframes myzoomin{
+			from{transform:none;}
+			to{transform:scale(0.5)}
+		}
+		.rotate:target{
+			animation: myrotate 2s;
+		}
+		@keyframes myrotate{
+			from{transform: none;}
+			to{transform: rotate(360deg);}
+		}
+	</style>
+</head>
+<body>
+	<img src="images/bg1.jpg" class="img moveleft" id="bg1" alt="">
+	<img src="images/bg2.jpg" class="img movetop" id="bg2" alt="">
+	<img src="images/bg3.jpg" class="img zoomout" id="bg3" alt="">
+	<img src="images/bg4.jpg" class="img zoomin" id="bg4" alt="">
+	<img src="images/bg5.jpg" class="img rotate" id="bg5" alt="">
+	<ul id="slider">
+		<li><a href="#bg1">AAA</a></li>
+		<li><a href="#bg2">BBB</a></li>
+		<li><a href="#bg3">CCC</a></li>
+		<li><a href="#bg4">DDD</a></li>
+		<li><a href="#bg5">EEE</a></li>
+	</ul>
+</body>
+</html>

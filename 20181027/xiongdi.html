@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>兄弟/相邻选择器</title>
+	<style>
+	/*.box1~div{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+	}*/	
+	.box1+div{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+	}
+	</style>
+</head>
+<body>
+	<div class="box1">1111</div>
+	<div class="box2">2222</div>
+	<div class="box2">3333</div>
+
+<!-- 	相邻~  后边的所有
+	兄弟+  相邻的第一个 -->
+<!-- 	margin:0 auto; 盒子居中 -->
+<!-- over-flow 超出内容后隐藏内容
+over-hidden  
+over-auto
+over-scroll  超出内容后出现滚动条 -->
+
+</body>
+</html>

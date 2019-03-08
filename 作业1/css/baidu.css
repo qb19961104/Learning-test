@@ -1,0 +1,128 @@
+#dingbu{
+	width: 200px;
+	height: 200px;
+	display: inline;
+}
+#dingbu a{
+	font-size: 0.8em;
+	margin-left: 10px;
+	font-weight: bold;
+	color: black;
+}
+#dingbuyou{
+	width: 200px;
+	height: 100px;
+	display: inline;
+	margin-left: 900px;
+	margin-top: 200px;
+}
+#zhong{
+     text-align: center;
+     margin-top: 10px;
+}
+input{
+	background-image: url("../images/4.png");
+	background-repeat: no-repeat;
+	background-position: 100%;
+}
+#dingbu a:hover {
+	color: #0000D4;
+}
+.shezhi{
+	display: inline-block;
+	list-style: none;
+	margin-left: -30px;
+	font-size: 0.8em;
+	text-decoration: underline;
+	width: 55px;
+	height: 20px;
+}
+.shezhi >li ul{
+	display: none;
+}
+.shezhi li:hover > ul{
+	display: block;
+	margin-left: -40px;
+	width: 55px;
+	height: 20px;
+	list-style: none;
+}
+.shezhi li:hover {
+	color: #0000D4;
+}
+.gengduo{
+	display: inline-block;
+	list-style: none;
+	margin-left: -40px;
+	font-size: 0.8em;
+	width: 55px;
+	height: 5px;
+	color: #FFFFFF;
+}
+.gengduo >li ul{
+	display: none;
+}
+.gengduo li:hover > ul{
+	display: block;
+	margin-left: -40px;
+	list-style: none;
+	width: 60px;
+	height: 1px;
+}
+.gengduo li:hover {
+	color: #0000D4;
+}
+#yixia{
+	background: #317EF3;
+	height: 39px;
+	border: 1px;
+	color: #FFFFFF;
+}
+#xia{
+	margin-top: 180px;
+	text-align: center;
+}
+#di1{
+	font-size: 0.75em;
+	color: #999999;
+	font-weight: bold;
+}
+#di2,#di3,#di3,#di4{
+	font-size: 0.75em;
+	color: #999999;
+	text-decoration: underline;
+	margin:0 10px;	
+}
+#di5,#di6,#di7,#di8{
+	font-size: 0.75em;
+	color: #999999;
+}
+#di9{
+	font-size: 0.75em;
+	color: #999999;
+	text-decoration: underline;
+	margin:0 10px;		
+}
+#di6,#di7{
+	text-decoration: underline;
+}
+#box1{
+	width:20px;
+	height:20px;
+	margin-bottom: -6px;
+	display: inline-block;
+	background-image: url("../images/3.png");
+	background-position: -600px -95px;
+}
+#box2{
+	width:20px;
+	height:20px;
+	margin-bottom: -6px;
+	margin-left: -15px;
+	display: inline-block;
+	background-image: url("../images/3.png");
+	background-position: -620px -95px;
+}
+body{
+	text-align: center;
+}

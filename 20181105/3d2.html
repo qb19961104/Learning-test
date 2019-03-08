@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 30px auto;
+			border:1px solid red;
+			transform:perspective(50px);
+			transform-style: preserve-3d; 
+			animation: rotate 10s;
+		}
+		.box1{
+			width:180px;
+			height: 120px;
+			margin: 40px 10px;
+    		background-color: #ccc;
+			transform: rotateX(40deg);
+		}
+		.box2{
+			width:180px;
+			height: 120px;
+			margin: 40px 10px;
+    		background-color: #ccc;
+			transform: rotateY(80deg);
+		}
+		.box3{
+			width:180px;
+			height: 120px;
+			margin: 40px 10px;
+    		background-color: #ccc;
+			transform: rotateY(120deg);
+		}
+		.box4{
+			width:180px;
+			height: 120px;
+			margin: 40px 10px;
+    		background-color: #ccc;
+			transform: rotateX(260deg);
+		}						
+		@keyframes rotate{
+			from{transform:transform:perspective(50px);}
+			to{transform:perspective(300px);}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">aaa</div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+	</div>
+</body>
+</html>

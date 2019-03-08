@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.mobile{
+			width: 500px;
+			height: 200px;
+			background: red;
+			margin: 80px auto;
+			color: #fff;
+			font-size: 4em;
+			text-align: center;
+			line-height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="mobile">
+			178****2243
+		</div>
+	</div>
+	<script>
+	var a=generateMobile(100);
+	console.log(a);
+
+	function generateMobile(num){
+		var arrMobile=[];
+		var secondNumber=[3,5,7,8];
+		for(var n=0;n>num;n++){
+		var mobile="1";
+		mobile+=secondNumber[Math.floor(Math.random()*secondNumber.length)];
+			for(var i=0;i<9;i++){
+			mobile+=Math.floor(Math.random()*10)
+	}
+		arrMobile.push(mobile);
+	}
+		return arrMobile; 
+	}
+	</script>
+</body>
+</html>

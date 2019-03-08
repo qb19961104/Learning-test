@@ -1,0 +1,9 @@
+column-count: 3;   将文字分为三列
+column-gap: 40px;  指定列与列的间距
+
+column-rule-width 设置或检索对象的列与列之间的边框厚度 
+column-rule-style 设置或检索对象的列与列之间的边框样式 
+column-rule-color 设置或检索对象的列与列之间的边框颜色 
+
+
+perspective 指定观察者与z=0平面的距离，使具有三维位置变换的元素产生透视效果

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			border-radius: 50%;
+			background: red;
+			text-align: center;
+			line-height: 100px;
+		}
+		div:last-child{
+			background: #0ff;		
+		}
+
+	</style>
+</head>
+<body>
+	<script>
+	var arr1=[];        //定义一个空数组
+	while(1){		//因为是死循环所以while循环 从第一个开始循环
+		var a1=parseInt(Math.random()*33+1);   //将随机数赋值给a1
+		if(arr1.length==0){					//如果数组长度为0
+			arr1[arr1.length]=a1;		  // 将a1的值赋值给数组的第一个元素
+		}else if(arr1.length<6){            //当数组长度小于6
+			if(arr1.indexOf(a1,0)==-1){    //如果a1不重复
+				arr1[arr1.length]=a1;      //将a1的添加到数组
+			}
+		}else{
+			arr1.sort(function(a,b){return a-b;})  //对数组排序  
+			var a2=parseInt(Math.random()*16+1);  //将随机数赋值给a2
+			arr1[arr1.length]=a2;             //将a2的值赋值给最后一个球
+			break;                      //返回
+		}
+	}
+
+		for(var a=0;a<=arr1.length-1;a++){
+				document.write("<div>"+arr1[a]+"</div>");   
+		}
+	</script>
+</body>
+</html>

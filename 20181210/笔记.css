@@ -1,0 +1,15 @@
+/*windows对象：*/
+/*浏览器对象模型BOM 是BOM的核心*/
+/*所有JavaScript全局对象、函数以及变量均自动变为windows*/
+/*对象的成员*/
+
+/*alert() prompt() */
+/*confirm() 显示带有确认 取消按钮的警告框*/
+/*open()*/
+/*close()*/
+/*focus()*/
+
+
+/*计时器类型：*/
+/*setTimeout  指定的延迟时间之后来执行代码*/
+/*setInterval() 每隔指定时间执行代码*/

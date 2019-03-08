@@ -1,0 +1,108 @@
+#hover ul{
+	display: none;
+}
+#hover>li>ul>li>ul>li{
+	border: 1px solid red;
+}
+#hover li:hover >ul{
+	display: block;
+}
+p:first-line {
+	color: red;       /*为第一行文字设置样式*/
+}
+p:first-letter {
+    font-size: 3em;   /*为第一个字母设置样式*/
+}
+#weilei>li:before {     /* after 所有文字之后添加*/
+     content:"text";    /*所有文字前加text*/
+}
+#weilei>li:before {
+     content:"url(image/1.jpg)";    
+}
+#weilei li:not(.text){
+    color:red;            /*使用样式除了被选中的*/
+}#weilei>li:empty{
+	background: blue;
+}
+        /*      first-child             对第一个子元素操作
+        	  last-child              对最后一个元素操作
+问题：区别    nth-chuild(2n)          对第n个元素 2n为对偶数项操作
+       		  nth-of-type(odd奇数/even偶数)       */
+
+
+/*属性选择器：只对带有指定属性的HTML元素设置样式*/
+/*[id=box1] {
+	width: 200px;
+	height: 20px;
+	background: red;
+	border: 1px;
+}*/
+/*[id*=box] {                 ^bbb    以bbb开头的标签
+	width: 100px;			$222    以222结尾的标签
+	height: 200px;          id*=box  匹配所有包含box的标签
+	marker: 100px 0;   
+	background: blue;         作业：兄弟 相邻选择器 
+}   */                               
+  
+ /* 给样式加！important  权值立即变为最高*/
+/*  块元素：
+  每个块级元素独占一行
+  块级元素的高度 宽度 行高以及底边框编剧都可设置
+  在不设置高度的情况下 继承父元素的属性*/
+
+ a{
+ 	display: block;       /*block内联元素变为块元素 inline块元素变为内联元素*/
+ 	background-color: red;
+ 	width: 100px;
+ 	height: 200px;
+ }
+/* 内联元素：
+ 和其他元素都在一行
+ 元素的宽度 高度以及底边距不可设置
+ 元素的高低就是他包含的图片或文字高度
+ 内联元素之间有默认距离*/
+
+/* 行内块级元素：
+ 和其他元素都在一行
+ 元素的宽度高度以及底边框均可设置
+ display: inline-block;
+ 典型例子：图片  表单text输入框*/
+
+/*
+ 盒子模型：IE盒子模型 标准盒子模型
+ content内容
+ padding填充
+ border边框
+ margin 边界 right右 lift左 top高 bottom底部*/
+
+ .box{
+ 	width: 200px;
+ 	height: 200px;
+ 	background: red;
+ 	padding-top:20px;
+ 	padding-bottom: 20px;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ 	border-top: 10px solid blue;
+ 	border-bottom: 10px solid blue;
+ 	border-left: 10px solid green;
+ 	border-right: 10px solid green;
+ 	margin-top: 20px;
+ 	margin-left: 20px;
+ /* ie盒子模型 设置 box-sizing: border-box*/
+ }
+/* 盒模型-边框*/
+ .box2{
+	width: 200px;
+	height: 200px;                      /*soild 实线*/
+	border:2px;                 		/*dotted 点线*/
+	border-style: dashed;              /* dashed 虚线*/
+	border-top: solid red 50px;         /*transparent 透明*/
+	border-radius:0 50% 0 50%;        	/*	弧线边框 */   
+ }
+/*边距合并：*/
+/* margin上下外边距合并：第一个盒子下边框与第二个盒子的上边框的距离取最大值
+ 左右不合并*/
+ /*如果父元素使用magin-top 第一个子元素也是用margin-top  第一个子元素跟随父元素  以后不跟随
+ 行内元素不能设置高度 margin-top margin-bottom 但是可以设置margin-left margin-right
+ 可以设置四个方向的padding*/

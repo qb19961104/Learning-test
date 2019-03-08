@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索</title>
+</head>
+<body>
+	<div class="container">
+		<div class="search">
+			<input type="text" name="keywords" id="keywords">
+			<button onclick="search()">搜索</button>
+		</div>
+		<div class="content">
+			对于但是看你空间的女会计师你打开是你死定了靠父母率没看独守空房卡死了大V领是凯迪拉克是mdslkvmklsdnvk老师，三方面来看卡是否能卡除了可是你发考虑你绿泥石了可能股份数量肯定阿卡丽但是看对于按时对于十大元帅舒服哈是否看见电脑福克斯当年房价肯定是你开始觉得你家电脑开机都能看见是你的看见女警付款的时间发你空间上的年份看电视呢发快递设计费你说的福克斯带你飞
+		</div>
+	</div>
+	<script type="text/javascript">
+	var originContent=document.querySelector('.content').innerHTML;		
+	function search(){
+		var keywords=document.getElementById('keywords').value;
+		var content=originContent;
+		var reg=new RegExp(keywords,"g");
+		content=content.replace(reg,'<span style="color:red;">'+keywords+'</span>');
+		document.querySelector('.content').innerHTML=content;
+	}
+		</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+		}
+		div>div{
+			width: 50px;
+			height: 50px;
+			background: #000;
+			display: inline-block;
+		}
+		p{
+			width: 50px;
+			height: 50px;
+			background: red;
+			display: inline-block;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		var a=parseInt(prompt("请输入行数"));
+		var b=parseInt(prompt("请输入列数"));
+		document.write("<div style='width:"+b*50+"px;'>")
+		for(var i=1; i<=a; i++){
+			for(var j=1; j<=b; j++)
+				if((i+j)%2==0){
+					document.write("<div></div>");
+				}
+				else{
+					document.write("<p></p>")
+				}
+				document.write("<br></br>")
+		}
+		document.write("</div>");
+	</script>	
+</body>
+</html>

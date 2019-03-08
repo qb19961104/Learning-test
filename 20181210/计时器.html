@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="cancleTime()">取消计时器</button>
+	<script type="text/javascript">
+	// 	var timeId=setTimeout(function(){
+	// 	console.log(new Date);
+	// },3000)
+
+	var timeId=setInterval(function(){
+		console.log(new Date);
+	},3000)
+	function cancleTime(){
+		clearInterval(timeId);
+	}
+	</script>
+</body>
+</html>

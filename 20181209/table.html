@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table class="table_product" width="80%" cellpadding="10" cellspacing="0" border="1">
+	<tr>
+		<td><input type="checkbox" name="checkAll"></td>
+		<td>产品名</td>
+		<td>价格</td>
+		<td>型号</td>
+		<td>操作</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="product_id[]"></td>
+		<td><input type="text" name=""></td>
+		<td><input type="text" name=""></td>
+		<td><input type="text" name=""></td>
+		<td><a href="javascript:void(0)">删除</a></td>
+	</tr>
+	</table>
+	<select name="" id="">
+		<option value="">1</option>
+		<option value="">2</option>
+		<option value="">3</option>
+		<option value="">4</option>
+		<option value="">5</option>
+	</select>
+	<button onclick="add()">添加</button>
+	<script type="text/javascript">
+	function add(){
+		var tr=document.createElement("tr");
+		td1=addTd("<input type='checkbox'>");
+		var td=document.createElement("td");
+	}
+	</script>
+</body>
+</html>

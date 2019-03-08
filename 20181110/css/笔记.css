@@ -1,0 +1,52 @@
+﻿完整的Javascript有三部分组成：
+核心：
+文档对象模型：
+
+
+
+浏览器内核：
+负责页面内容的渲染，主要有两部分组成：
+1.内容排版引擎--解析HTML/CSS
+2.脚本解释引擎--解析JavaScript
+
+
+写入JavaScript：
+1.内联 <script></script>
+2.外联 <script src="js/script.js"></script>
+3.<button onclick="alert('hello wold">click one</button>
+
+特点：
+1.出现错误，前面的内容不影响 后边的内容不解析
+2.大小写敏感
+3.换行，分号    空格，tab
+4.console.log(typeof(a));  控制台输出
+5.小数显示特别注意，0.9  0.8 显示为0.8888888889等 
+
+
+注释：
+单行注释：//
+多行注释：/* */
+
+声明变量 var   =赋值
+
+命名：不允许使用语言关键字和保留字作为变量名
+
+数据类型：
+1.原始类型：number数字 string字符串 boolean布尔
+2.特殊类型：null空(显示object 对象) underfind 未定义
+3.引用类型：
+
+隐式转换：
+数字+字符串=字符串拼接
+数字+布尔=数字+1/0
+字符串+布尔=布尔类型转换为字符串  字符串+true/false
+布尔+布尔=都变成int类型
+
+
+强制转换：
+1.parseInt 强制转换为int类型  (NaN:Not a Number)  
+如果以数字开头，遇到字符串省略后边的，
+如果以非数字开头的显示NaN，布尔类型显示为NaN
+2.parseFloat 强制转换为float类型  布尔类型显示为NaN
+3.toString 强制转换为字符串类型 console.log(str.toString());
+4.Number 转换为数字类型 只识别数字类型，不是数字类型NaN

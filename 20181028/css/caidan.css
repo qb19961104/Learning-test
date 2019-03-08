@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+#nav{
+	width: 1000px;   
+/*	background: radial-gradient(circle farthest-corner, #f00, #ff0, #080); */  /*颜色渐变 */    
+	margin: 40px auto;
+	box-shadow: 10px 10px 20px 10px red;     /*图片产生阴影*/
+	border-radius: 5px;
+	border: solid right;
+}
+#nav a{
+	color: #fff；
+	text-decoration: none;
+	padding: 12px 30px;
+	display: inline-block;
+	border: solid #fff;
+}
+#nav：after{
+	content: "";
+	display:block; 
+	clear: both; 
+}
+#nav > li{
+	float: left;
+	position: relative;
+}
+#nav a:hover{
+	background-color: green;
+	display: block;
+	clear: both;
+}	
+#nav >li >ul{
+	position: absolute;
+	top: 45px;
+	visibility: hidden;
+	transition: all 1s;
+}
+#nav ul a{
+	background: pink;
+	width: 75px;
+}
+#nav > li:hover ul{
+	visibility: visible;
+	margin: 0;
+}

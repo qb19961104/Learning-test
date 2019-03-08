@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机色带</title>
+	<style>
+	.dai{
+		width: 100%;
+		font-size: 10px;
+		text-align: center;
+	}
+	.box1{
+		padding: 20px;
+	}
+	.choice{
+		width: 6%;
+		display: inline-block;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<script>
+	var str = "";
+	str += "<div class='box1'>";
+		for(var i=1;i <=520;i++){
+			var colr =sre();
+			// str += "<div class='dai' style='background-color:rgb("+re()+");'>"+i+"";
+			str += "<div class='choice' style='background-color:"+colr+";'>"+colr+"";
+			str += "</div>";
+		}
+	str += "</div>";
+
+
+	str += "<div class='box'>";
+		for(var i=1;i <=52;i++){
+			var cor =sre();
+			// str += "<div class='dai' style='background-color:rgb("+re()+");'>"+i+"";
+			str += "<div class='dai' style='background-color:"+cor+";'>"+cor+"";
+			str += "</div>";
+		}
+	str += "</div>";
+	function re(){
+		var r=parseInt(Math.random()*256);
+		var g=parseInt(Math.random()*256);
+		var b=parseInt(Math.random()*256);
+
+		return r+","+g+","+b;
+	}
+	function sre(){
+		var str1 = "#";
+		for(var i=1;i<=6;i++){
+			var colo = parseInt(Math.random()*16);
+			str1 += colo.toString(16);
+		}
+		return str1;
+	}
+
+
+// var azAz = [];
+// while(1){
+// 	var upper = String.fromCharCode(parseInt((Math.random()*(90-65)+65)));//A-Z
+// 	var lower = String.fromCharCode(parseInt((Math.random()*(122-97)+97)));//a-z
+
+// 	if(azAz.length == 0){
+// 		azAz[azAz.length]=upper;
+// 		azAz[azAz.length]=lower;
+// 	}else if(azAz.length<50){
+// 		if(azAz.indexOf(upper,0)==-1&&azAz.indexOf(lower,0)==-1){
+// 			azAz[azAz.length]=upper;
+// 			azAz[azAz.length]=lower;
+// 		}
+// 	}else{
+// 		break;
+// 	}
+// }
+// for(var i in azAz){
+// 	document.write(i+'>>'+azAz[i]+'<br/>');
+// }
+
+	console.log(sre());
+	document.write(str);
+	</script>
+</body>
+<ml>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		font-size: 0;
+	}
+	div{
+		height: 500px;
+		width: 500px;
+		margin: 0 auto;
+		background: url(images/1.jpg) no-repeat;
+	}
+	div>div{ 
+		/*border: 1px solid #C1DAD7; */
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		animation-name: flip;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		transform-style: preserve-3d;
+		transform: rotateY(0deg);
+		z-index: 0; 
+		display: inline-block;
+	}
+	@keyframes flip{
+		0%{
+			transform: rotateY(0deg);
+		}
+		50%{
+			transform: rotateY(90deg);
+		}
+	} 
+	</style>
+</head>
+<body>
+	<script>
+		document.write("<div>");
+ 			for (var a=0;a<10;a++){
+  				document.write("<div style='background:url(images/timg.jpg) -"+a*50+"px -50px; animation-delay: 0.1s; '></div>");
+				}
+				document.write("<br>");
+ 			for (var b=0;b<10;b++){
+  				document.write("<div style='background:url(images/timg.jpg) -"+b*50+"px -100px; animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var c=0;c<10;c++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+c*50+"px -150px;animation-delay: 0.1s'></div>");
+				}	
+				document.write("<br>");			
+			for (var d=0;d<10;d++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+d*50+"px -200px;animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var e=0;e<10;e++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+e*50+"px -250px ;animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var f=0;f<10;f++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+f*50+"px -300px;animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var g=0;g<10;g++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+g*50+"px -350px;animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var h=0;h<10;h++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+h*50+"px -400px;animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var i=0;i<10;i++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+i*50+"px -450px;animation-delay: 0.1s'></div>");
+				}
+				document.write("<br>");
+			for (var j=0;j<10;j++){
+  				document.write("<div style='background:url(images/timg.jpg)  -"+j*50+"px -500px;animation-delay: 0.1s'></div>");
+				}
+				document.write("</div>");
+</script>
+</body>
+</html

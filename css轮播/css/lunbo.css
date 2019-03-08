@@ -1,0 +1,53 @@
+*{
+	margin:0;
+	padding: 0;
+}
+.box{
+	width: 220px;
+	height: 200px;
+	margin: 90px auto;
+	border: solid 1px red;
+	border-radius: 5px;
+	z-index: 99;
+}
+img{
+	position: fixed;
+	z-index: 1;
+}
+.num{  
+    z-index:10;  
+    border-radius:100%;  
+    background:#f00;   
+    line-height:25px;  
+    cursor:pointer;  
+    color:#fff;  
+    text-align:center;  
+    opacity:0.8;  
+}
+.num:hover{
+	background:#00f;
+}
+.img:target{
+	z-index: 10;
+}
+.img:not(:target){
+	animation: notTarget 1s;
+}
+@keyframes notTarget {
+	from{z-index:3;}
+	to{z-index:7;}
+} 
+.moveleft:target{
+	animation: myleft 2s;
+}
+@keyframes myleft{
+	from{transform: translateX(220px);}
+	to{transform: translateX(0);}
+}
+.movetop:target{
+	animation: mytop 2s;
+}
+@keyframes mytop{
+	from{transform: translateX(220px);}
+	to{transform: translateX(0);}
+}

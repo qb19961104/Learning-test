@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form name="form1" method="post" action="">
+		<table width="221" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF"	bordercolordark="#CCCCCC" bordercolorrlight="#FFFFFF">
+			<tr>
+				<td height="30" colspan="2" bgcolor="#eeeeee">*用户登录</td>
+			</tr>
+			<tr>
+				<td width="59" height="30">用户名:</td>
+				<td width="162"><input type="text" name="user" id="user"></td>
+			</tr>
+			<tr>
+				<td height="30">密&nbsp;&nbsp;码:</td>
+				<td><input type="text" name="password" id="password"></td>
+			</tr>
+			<tr>
+				<td height="30" colspan="2" align="center"><input type="button" name="Button" class="btn_grey" value="登录" onClick="check()">
+				&nbsp;
+				<input type="reset" name="Submit2" class="btn_grey" value="重置"></td>
+			</tr>
+		</table>
+	</form>
+	<script language="javascript">
+	function check(){
+		var name= form1.user.value;
+		var password= form1.password.value;
+		if((name=="")||(name==null)){
+			alert("请输入用户名！");
+			form1.user.focus();
+			return;
+		}else if((password=="")||(password==null)){
+			alert("请输入密码！");
+			form1.password.focus();
+			return;
+		}else{
+			form1.Submit();
+		}
+	}
+	</script>
+</body>
+</html>

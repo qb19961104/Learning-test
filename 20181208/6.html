@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>快速排序</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var arr=[4,456,888,55,324,145,42];
+	console.log(quicksort(arr));
+	function quicksort(arr){
+		if(arr.length<=1){
+			return arr;
+		}
+		// 找到数组的中间值和中间的值所在下标
+		var pivotIndex=Math.floor(arr.length/2);
+		var piovt=arr[pivotIndex];
+		//从数组中把中间值去掉
+		arr.splice(pivotIndex,1);
+		//定义两个数组 分别代表数组中间值的左半部分和右半部分
+		var left=[];
+		var right=[];
+		for(i=0;i<arr.length;i++){
+			if(arr[i]<piovt){
+				left.push(arr[i]);
+			}
+			else{
+				right.push(arr[i]);
+			}
+		}
+		left=quicksort(left);
+		right=quicksort(right);
+		console.log(piovt);
+		console.log(pivotIndex);
+		return left.concat([piovt],right);
+	}
+	</script>
+</body>
+</html>

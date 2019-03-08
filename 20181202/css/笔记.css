@@ -1,0 +1,170 @@
+DOM(Document Object Model):文档对象模型 定义访问和处理HTNL文档的标准方法。
+DOM将HTML文档呈现为带有元素，属性和文本的树结构。
+
+HTML文档有节点构成的集合，DOM节点有:
+元素节点:html,body,p等都是元素节点,及标签
+文本节点:向用户展示的内容，向<li>...</li>中的JavaScript,DOM,css等文本
+属性节点:元素属性,如<a>标签的连接属性href="".
+
+nodeName:返回一个字符串,其字母是给定的节点的名字
+nodeType:返回一个整数,这个数值代表给定的节点类型
+nodeValue:返回给定节点的当前值
+
+遍历节点树：
+childNodes:返回一个数组，这个数组有给定元素的子节点构成
+firstChild:返回第一个子节点
+lastChild:返回最后一个子节点
+parentNode:返回一个给定节点的父节点
+nextSibling:返回给定节点的下一个兄弟结点
+previousSibling:返回给定节点的上一个兄弟结点
+
+DOM操作：
+createElement(element) 创建一个新的元素节点
+createTextNode()  创建一个包含着给定文本的新文本节点
+appendChild()   指定节点的最后一个子节点列表之后添加子节点
+insertBefore()   将一个给定节点插入到一个给定元素节点的给定子节点的前面
+removeChild()    从一个给定元素中删除一个子节点
+replaceChild()   把一个给定元素里的一个子节点替换为另外一个节点
+
+getElementsByName方法：
+
+返回带有指定名称的节点对象集合
+语法：document.getElementsByName(name)
+文档中的name属性可能不唯一，所有getElementsByName()方法返回的是与元素的数组，
+而不是一个元素
+和数组类似的也有length属性，可以和访问数组一样的方法来访问，从0开始
+
+getElementsByTagName()
+
+返回带有指定标签名的节点对象集合，返回元素顺序是他们在文档中的顺序
+语法：getElementsByTagName(tagneme)
+不但直接找元素，而且还找所有子元素
+tagName是标签的名称，如p a img等标签名
+和数组类似的也有length属性，可以和访问数组一样的方法来访问，从0开始
+1.按id查找：
+ var elem=getElementsById("id");
+  返回一个元素对象.如果未找到，返回null
+2.按class查找：
+ var elems=parent.getElementsByClassName("class");
+
+ querySelector方法：
+ 1.只差找一个符合条件的元素：
+ var elem=document.querySelector("#d1>ul>li:nth-child(5)");
+ 返回一个元素对象，如果未找到，返回null
+ 2.查找所有符合条件的元素
+ var elem=document.querySelectorAll(#d1>ul>li);
+ 返回静态集合(static collection)
+ 缺点：查询效率低，包含完整的节点对象及其属性，DOM数的更改，不会影响
+ 当前结果，如果未找到，返回空集合[]
+  getXXXByXXX   VS    querySelector
+  1.getXXXByXXX的效率比querySelector高得多
+  2.querySelector比getXXXByXXX使用更简洁;如果通过一个属性就可获得结果时，首选getXXX;
+  必须通过复杂的查询才可获得结果时，首选querySelector
+ 
+ getAttribute()方法
+ 通过元素节点的属性名称获取属性值
+ 语法：elementNode.getAttribute(name)
+ elementNode:使用getElementById(),getElementByTagName()等方法，获取到的元素节点
+ name：要想查询的元素节点的属性名字
+
+ setAttribute()方法
+ setAttribute()方法增加一个指定名称和值的新属性，或者把一个现有的属性设定为指定的值
+ 语法：elementNode.setAttribute(name.value)
+ name: 要设置的属性名
+ value: 要设置的属性值
+ 把指定的属性设置为指定的值，如果不存在具有指定属性名称的属性，该方法将创建一个新属性
+ 类似于getAttribute()方法，setAttribute()方法只能通过元素节点对象调用的函数
+
+ 获取或修改元素的样式
+ HTML DOM:
+ 内联样式：
+              获取：elem.style.属性名
+              js中CSS属性名都变为：去横线改驼峰
+    问题：只能获得内联样式
+    解决：获得计算后的样式：一个元素最终应用的所有样式
+     既包含内联样式，又包含样式表中样式和浏览器的默认样式
+     var style=getComputedStyle(elem)
+			IE8:elem.currentStyle
+     var value=style.属性名
+
+节点属性：
+在DOM中，每个节点都有一个对象，DOM节点有三个重要的属性：
+nodeName:节点的名称
+nodeValue:节点的值
+nameType:节点的类型
+nodeName属性,节点的名称，是只读的
+ 元素节点的nodeName与标签名相同
+ 属性节点的nodeName是属性的名称
+ 文本节点的nodeName永远是#text
+ 文档节点的nodeName永远是#document
+nodeValue属性：节点的值
+ 元素节点的nodeValue是underfined或null
+ 文本节点的nodeValue是文本自身
+ 属性节点的nodeValue是属性的值
+
+nodeType属性：节点的类型，是只读的，以下常用的几种节点类型：
+元素：1
+属性：2
+文本：3
+注释：8
+文档：9
+
+访问子节点childNodes
+访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，具有length属性
+语法：elementNode.childNodes
+如果选定的节点没有子节点，则该属性返回不包含节点的NodeList
+
+访问子节点第一和最后项
+node.firstChild
+
+node.lastChild
+
+访问父节点parentNode
+获取指定节点的父节点
+语法：elementNode.parentNode
+父节点只能有一个
+
+访问兄弟节点：
+nextSibling属性可返回某个节点之后紧跟的节点(处于同一树层级中)
+语法：nodeObject.nextSibling
+如果无此节点，则返回null
+perviousSibling属性可返回某个节点之前紧跟的节点(处于同一树层级中)
+语法：nodeObject.prebiousSibling
+如果无此节点，则返回null
+两个属性获取的是节点，IE会忽略节点生成空白文本节点，而其他浏览器不会忽略
+
+插入节点appendChild()
+在指定节点的最后一个子节点列表后添加一个新的子节点
+语法：appendChild(newnode)
+newnode:指定追加的节点
+
+插入节点：
+insertbefore
+
+删除节点：
+removeChild()从子节点列表删除某个节点，如果删除成功，此方法可返回被删除的节点
+如失败，则返回null
+语法：nodeObject.removeChild(node)
+参数：node必须指定要删树的节点
+
+替换节点：
+replaceChild实现子节点的替换。返回被替换对象的引用
+语法：node.replaceChild(newnode.oldnew)
+参数：newnode 必须 用于替换oldnew对象
+oldnew：必须 被newnode替换的对象
+
+创建元素节点和文本节点：
+createElement方法可创建元素节点，此方法可返回一个Element对象
+语法：document.createElement(tagName)
+参数：tagName 标签名 这个字符串用来指明创建元素的类型
+与appendChild或insertBefore方法联合使用，将元素显示在页面中
+createTextNode()方法创建新的文本节点，返回心创建的Text节点
+语法：document.createTextNode(data)
+参数：data 字符串值。可规定此节点的文本
+
+为空元素添加关键属性：
+elem.属性名="值"
+elem.innerHTML="内容"
+相当于：<标签名 属性名="值">内容</标签名>
+
+

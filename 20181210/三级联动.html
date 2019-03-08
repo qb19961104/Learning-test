@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>省市区三级下拉联动</title>
+</head>
+<body>
+	<select name="province" id="province">
+		<option value="">--请选择--</option>
+	</select>
+	<select name="city" id="city">
+		<option value="">--请选择--</option>
+	</select>
+	<select name="county" id="county">
+		<option value="">--请选择--</option>
+	</select>
+	<script>
+	var arrProvince=['陕西省','北京','云南省','上海'];
+	var arrCity=[['西安','铜川','宝鸡'],
+				['北京'],
+				['昆明','玉溪'],
+				['上海']];
+	var province=document.getElementById('province');
+	appendOption(arrProvince,province);
+
+		// DOM-2级事件,当引用其他插件时，自己定义使用addEventListener
+		province.addEventListener('change',function(){
+			// 获得当前被选中省份option的value值
+			// this值是change时间嘴硬的select元素节点
+			var provinceSelectedIndex=this.value;
+			var arrCityOption=arrCity[provinceSelectedIndex];
+			appendOption(arrCityOption,city);
+			appendOption([],county);
+			
+		},false);
+		// province.onchange=function(){
+
+		// }
+
+		// 添加option节点给到指定的select节点下
+		function appendOption(arr,node){
+			var str=node.innerHTML;
+			for(var i=0;i<arr.length;i++){
+				str+="<option value="+i+">"+arr[i]+"</option>"
+	}
+			node.innerHTML=str;
+		}
+	</script>
+</body>
+</html>

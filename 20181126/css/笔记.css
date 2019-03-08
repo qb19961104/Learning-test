@@ -1,0 +1,85 @@
+ 内置对象：
+ String对象：用于处理文本(字符串)
+ 创建String:
+ new String("abcde");
+ 创建原始类型字符串变量：
+ var name1="wang";
+ var name2=String("wang");
+ 创建引用类型字符串对象：
+ var name3=new String("wang");
+
+ 字符串的使用：内容不可变。大部分方法返回一个全新的对象，而不是修改原始字符串内容
+	var s1=new String('hello');
+ 	var s1=str1.toUpperCase();
+ 	console.log(s1);
+ 	console.log(s2);
+ Length属性返回字符串中字符的个数。JavaScript字符串默认采用Uncoide字符集，中文字符也只算一个字符
+ 	var s1=new String('abc中文');
+ 	console.log(s1.length);
+  
+ 	var lowerName=name.toLowerCase();  转换为小写
+ 	var upperName=name.toUpperCase();  转换为大写
+
+ 获取指定位置的字符串：
+ chartAt(index);用于获取指定下标处的字符
+	var s1=new String("abc中文def");
+	var s2=s1.charAt("2");
+	console.log(s2);
+ chartCodeAt(index)用于获取指定下标处的Unicode码。
+ 	var s1=new String("abc中文def");
+ 	console.log(s1.charCodeAt(2));
+ 	console.log(s2.charCodeAt(3));
+ 	console.log(s2.charCodeAt(4));
+
+ 检索字符串：
+ indexOf(value.[fromindex])返回第一次出现指定字符的下标
+ lastindexOf(value.[fromindex]) 返回最后一次出现指定字符串的下标
+
+ 	var email="stanley.wang@163.com";
+ 	console.log(email.indexOf("stanley"));
+ 	console.log(email.indexOf("@"));
+ 	console.log(email.indexOf("@",5));    ！！！5表示下标
+ 	console.log(email.lastIndex("@"));
+ 	console.log(email.lastIndex("@",5));
+ 	console.log(email.lastIndex("mary"));
+
+ 截取字符串：
+ 	slice(start[end]);  返回从start到end-1范围内的子串；若省略end，则直接获取到字符串结尾
+ 	substring(start[end]);  返回从start到end-1范围内的子串；若省略end，则直接获取到字符串结尾
+ 
+ 	var email="stanley.wang@163.com";
+ 	console.log(email.slice(8,12);
+ 	console.log(email.slice(8));
+ 	console.log(email.substring(8,12));    ！！！5表示下标
+ 	console.log(email.substring(8));
+ 	console.log(email.slice(8,12));
+
+ 分隔字符串：
+ 	split(separator.[count];  指定分隔符对字符串进行拆分
+
+ 	var date="wang||zhang||xi||fan";
+ 	var arr = date.split("||");
+ 	for(var i=0;i<arr.length;i++){
+ 		console.log(i+":"+arr[i]);
+ 	}
+
+  替换字符串：
+  replace(substr/regexp.replacement) 方法用于在字符串用一些字符替换另一些字符，或者替换一个与正则表达式匹配的子串
+  var s1=new String("Microsoft is a big dfdscsd");
+  console.log(s1.replace('microsoft','oracle'));
+  console.log(s1.replace(/microsoft/g','oracle'));
+
+  匹配：
+  match(value/regexp) 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配
+  该方法类似indexOf()和lastIndexOf(),但是它返回指定的值，而不是字符串的位置。
+  var s1=new String("Microsoft is a big dfdscsd");
+  console.log(s1.match('microsoft'));
+  console.log(s1.match(/microsoft/g));
+
+  查找：
+  search(regexp)用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串
+  返回第一个与regexp相匹配的子串的起始位置，如果没有找到任何匹配的子串，返回-1
+  不支持全局匹配，将忽略标志g(全局匹配)
+   var s1=new String("Microsoft is a big dfdscsd");
+  console.log(s1.search('microsoft'));
+  console.log(s1.search(/microsoft/g));

@@ -1,0 +1,97 @@
+Math :执行普通的算数任
+使用方法：
+ var m=new Math.Pi;			//π
+ var y=Math.sqrt(16);    //平方跟
+    e         返回算数常亮e
+    LN2       返回2 的自然对数
+    LN10      返回10 的自然对数
+    LOG2E     返回以2为底的e的对数
+    LOG10E    返回以10为底的e的对数
+    PI        返回圆周率
+    SQRT1_2   返回2的平方跟的倒数
+    SQRT2     返回2的平方跟
+
+	Math()调用
+   ！！！ abs(x)   返回绝对值
+   ！！！ ceil(x)  对数字向上取整
+	floor(x) 对数字向下取整
+	round(x) 把数字进行四舍五入
+	pow(x，y)    返回x的y次幂
+	exp()    返回e的指数
+	max/min(x,y)  返回x,y中的最大/小值
+	log(x)    返回数的自然对数(以e为底)
+	sqrt(x) 返回数的平方根
+ Math对象无需在使用这个对象之前对它进行定义
+ 
+随机数：
+random()返回0-1之间的随机数
+
+Date对象:用于对日期和时间进行存储和计算
+
+ 使用指定的年与日进行初始化
+
+ var d1=new Date(2016.4.1)
+ 初始化系统时间
+
+ var d2=new Date();
+ var d3=new Date;
+ var d4=Date();  构建一个string，值为当前系统时间
+ var d5=new Date(0);
+ var d6=new Date(1000*3600*24*365);
+ console.log(d6);
+
+获取时间：
+ getDate();             返回Date对象日期部分数值(1-31)
+ getDay();				返回Date对象星期部分数值(0-6)
+ getFullYear();			返回Date对象年份部分的实际数值
+ getHours();			返回Date对象小时部分数值(0-23)
+ getMinutes();			返回Date对象分钟部分数值(0-59)
+ getMilliseconds();		返回Date对象“毫秒”部分数值0-999)
+ getMonth();			返回Date对象月份部分数值(0-11)
+ getSeconds();			返回Date对象秒部分数值(0-59)
+ getTime();				返回Date对象与UTC时间1970年1月4日午夜之间相差的毫秒数
+
+ 修改时间：
+ get改为set;
+ setDate();             设置Date对象日期部分数值(1-31)
+ setFullYear();			设置Date对象年份部分的实际数值
+ setHours();			设置Date对象小时部分数值(0-23)
+ setMinutes();			设置Date对象分钟部分数值(0-59)
+ setMilliseconds();		设置Date对象“毫秒”部分数值0-999)
+ setMonth();			设置Date对象月份部分数值(0-11)
+ setSeconds();			设置Date对象秒部分数值(0-59)
+ setTime();				以毫秒值设置Date对象			
+
+时间格式转换：
+toDateString()   返回Date对象日期部分(年月日)的字符串形式
+toGMTString()    基于本地时间格式。返回Date对象日期部分(年月日)的字符串形式
+toLocaleTimeString()  基于本地格式，返回Date对象的字符串形式
+toLocaleDateString()  基于本地格式，返回Date对象实际部分(时分秒)的字符串形式
+toString()	返回Date对象的字符串形式
+toTimeString()  返回Date对象实际部分的字符串形式
+toUTCString()     基于UTC时间格式，返回Date对象的字符串形式  
+
+创建number对象
+//构建新的number对象
+
+number对象属性和方法：
+toExponential(x)   把对象转换为指数计数法
+toFixed(x)        把数有指定位数的数字字转换为字符串，结果的小数点后
+toPrecision()     把数字格式转换为具有指定有效位数的字符串
+toString()        把数字转换为指定进制表示的字符串
+
+
+布尔对象(boolean):表示一个布尔值对象
+构建新的Boolean对象--引用类型对象
+var b1=new Boolean();
+var b2=new Boolean(false);
+var b3=new Boolean(0);
+var b4=new Boolean(null);
+var b5=new Boolean(undefined);
+var b6=new Boolean(NaN);
+var b7=new Boolean("");
+var b8=new Boolean(0.0);
+
+
+
+

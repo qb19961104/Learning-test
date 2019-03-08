@@ -1,0 +1,90 @@
+<!DOCTYPE html>  <!-- <文档类型声明> -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<title></title>
+</head>
+<body>
+   <!--  无序列表 -->
+   <ul type="square">
+		<li>列表一 	
+			<ul>
+		   		<li>菜单一	
+		   			<ul>
+		   				<li>菜单1</li>
+		   				<li>菜单2</li>
+		   				<li>菜单3</li>
+		   			</ul>
+		   		</li>
+			</ul>
+		</li>					<!-- li{列表1}*4  快速生成表格 -->
+		<li>列表1</li>			<!-- disc  实心圆 -->
+		<li>列表1</li>			<!-- circle  空心圆 -->
+		<li>列表1</li>			<!-- square  实心矩形 -->			
+		<li>列表1</li>			<!--  <start 起始编号 type 编号类型> -->
+   </ul>
+  <!--  <有序列表> -->
+   <ol type="A">            
+		<li>菜单一</li>
+		<li>菜单一</li>
+		<li>菜单一</li>
+   </ol>
+   <dr>
+		<dt>HTML</dt>
+		<dd>HTML是超文本标记语言</dd>
+		<dt>CSS</dt>
+		<dd>CSS是层叠样式表，用来定义网页中元素呈现的样式</dd>
+   </dr>
+	<!-- <表单：用于显示，收集信息，并提交信息到服务器> -->
+	<!-- <表单的创建> -->
+	<!-- action 制定提交到后台的路径 method制定提交的方式 默认是get方式 可以指定post方式提交 -->
+	<form action="index.php" method="post">   
+		<label for="username">用户名:<input type="text" name="username" id="username" required>  <!-- required必填项 -->
+		<br>
+		<label for="password">密	&nbsp;&nbsp;码:<input type="password" name="password" id="password">
+		确认密码：<input type="password" name="confirm_password">
+		<br>
+		手机号：<input type="text" name="mobile"><button>获取验证码</button>
+		<br>
+		输入验证码：<input type="text" name="">
+		<br>
+		<button type="submit" disabled="disabled">登录</button>         <!-- 提交按钮 -->
+		<button type="button">普通按钮</button>		<!-- 普通按钮 -->
+		<input type="submit" value="提交按钮">
+		<input type="button" value="普通按钮">		<!-- 普通按钮 -->
+		<input type="reset" value="重置">			<!-- 重置按钮 -->
+		<br>
+	<!-- 单选按钮 input type="radio" 
+				check默认选中状态-->
+		请选择性别：
+		<input type="radio" name="gender" value="1">男 &nbsp;
+		<input type="radio" name="gender" value="2" checked="checked">女
+		<br>
+	<!-- 复选框 -->
+		请选择爱好：
+		<label><input type="checkbox" name="aihao" value="">足球</label>
+		<input type="hidden" name="id" value="111"> <!-- 隐藏域 不需要用户看见但需要提交的信息-->                     
+		<input type="checkbox" name="aihao" checked="checked">篮球
+		<input type="checkbox" name="aihao">唱歌
+		<input type="checkbox" name="aihao" checked="checked">跳舞
+		E-mail:<input type="E-mail" placeholder="请输入邮箱"> <!-- placeholder设置默认的提示信息 -->
+		数字：<input type="number">
+		生日：<input type="date">
+		<br>
+	<!-- 下拉框 -->
+	请选择所在省份：
+		<select name="" size="4" multiple="multiple">
+			<option value="">--请选择--</option>
+			<option value="山西">山西</option>
+			<option value="陕西" select="select">陕西</option>
+			<option value="四川">四川</option>
+		</select>
+		<br>
+	<!-- 上传头像 -->
+	上传头像:<input type="file">
+	<!-- 添加音频 -->
+	<embed src="sound.mp3" width="200px" height="200px"></embed>
+	</form>
+</body>
+</html>

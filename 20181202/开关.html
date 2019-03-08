@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开关</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	h1,p,div>div{
+		float: left;
+		font-size: 24px;
+		line-height: 400px;
+		height: 400px;
+		background: #ff0;
+	}
+	p{
+		background: #aa0;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>树形列表</h1>
+		<p onclick="onoff(this)">&lt;&lt;</p>
+		<div>内容的主体</div>
+	</div>
+	<script>
+	function onoff(p){
+		if(p.innerHTML=="&lt;&lt;"){
+			document.getElementsByTagName("h1") [0].style.display="none";
+			p.innerHTML="&gt;&gt"
+		}else{
+			document.getElementsByTagName("h1") [0].style.display="inline-block";
+			p.innerHTML="&lt;&lt"
+		}
+	}
+	</script>
+</body>
+</html>

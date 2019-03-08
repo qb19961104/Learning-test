@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			margin: 0 auto;
+		}
+		div>div{
+			width: 1000px;
+			height: 10px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	function h(){
+		var str="#"
+		for(var i=1;i<=6;i++){
+			var a=parseInt(Math.random()*16);
+			str+=a.toString(16);
+		}
+		return str;
+		}
+		function h1(){
+			var a=Math.random()*256;
+			var b=Math.random()*256;
+			var c=Math.random()*256;
+			return(a+","+b+","+c)
+		}
+	document.write("<div>");
+		for(var i=1;i<60;i++){
+		document.write("<div style='background-color:rgb("+h1()+");'></div>");
+		}
+	// 	for(var i=1;i<80;i++){
+	// 	document.write("<div style='background-color:"+h()+";'></div>");
+	// }
+	document.write("</div>");
+	</script>
+</body>
+</html>

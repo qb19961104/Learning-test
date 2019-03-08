@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// function yueshu(num1,num2){
+	// 	var min;
+	// 	var max;
+	// 	if(num1>num2){
+	// 		max=num1;
+	// 		min=num2;
+	// 	}
+	// 	else{
+	// 		max=num2;
+	// 		min=num1;
+	// 	}
+
+
+	// 	while(true){
+	// 		var ys = max % min;
+	// 		if(ys==0){
+	// 			return min;
+	// 		}
+	// 		max = min;
+	// 		min = ys;
+	// 	}
+	// }
+	// alert(yueshu(12,15));
+
+	var money=10;
+	var ping=0;
+	var gai=0;
+	var shui=0;
+	while(money>=2||ping>=2||gai>=4){
+		if(money>=2){
+			shui++;
+			ping++;
+			gai++;
+			money-=2;
+		}
+		if(ping>=2){
+			shui++;
+			ping++;
+			gai++;
+			ping-=2
+		}
+		if(gai>=4){
+			shui++;
+			ping++;
+			gai++;
+			gai-=4;
+		}		
+	}
+	alert(shui);
+	</script>
+</body>
+</html>

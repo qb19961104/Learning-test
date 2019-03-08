@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    html{
+        background: radial-gradient(ellipse at center, #2A2A2A 0%, #000000 100%);
+        width: 100%;
+        height:100%;
+    }
+    .sence{
+        width: 600px;
+        height:600px;
+        position: fixed;
+        top: 0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin: auto;
+    }
+    .box{
+        width: 300px;
+        height:300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform-origin: center center 75px;
+        /*允许改变转换元素的位置*/
+        animation:  myfirst 3s linear infinite ;
+        /*指的是匀速变化   并且原路返回*/alternate
+    }
+    .box div{
+        width: 100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        border-radius: 5px;
+        transform-style: preserve-3d;
+        box-shadow: 0 0 30px 5px #fff;
+        opacity: 0.8;
+    }
+    @keyframes myfirst {
+        from {
+            transform:  skew(0) translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        to {
+            transform: skew(0deg) translate3d(10px,20px,30px) rotateX(360deg) rotateY(360deg) rotateZ(90deg);
+        }
+    }
+    .box div:nth-child(1){
+        background-image: url(img/psbe5ZDRJYLJ.jpg);/*照片可以另行添加，也可以换成背景色*/
+        background-size: 300px 300px;
+        transform-origin: top;
+        transform: rotateX(90deg);
+    }
+    .box div:nth-child(2){
+        background-image: url(img/psbe7VL5XVBF.jpg);
+        background-size: 300px 300px;
+        transform-origin:left;
+        transform: rotateY(-90deg);
+    }
+    .box div:nth-child(3){
+     background-image: url(img/psbeL8Q5LRIN.jpg);
+     background-size: 300px 300px;
+    }
+    .box div:nth-child(4){
+        background-image: url(img/psbeNEXVJIFI.jpg);
+        background-size: 300px 300px;
+        transform-origin:right;
+        transform: rotateY(90deg);
+    }
+    .box div:nth-child(5){
+        background-image: url(img/psbeUIJ7FZJ6.jpg);
+        background-size: 300px 300px;
+        transform-origin: bottom;
+        transform: rotateX(-90deg);
+    }
+    .box div:nth-child(6){
+        background-image: url(img/psbR3FYMIPK.jpg);
+        background-size: 300px 300px;
+        transform: translateZ(300px);
+    }
+</style>
+<body>
+<div class="sence">
+    <div class="box">
+        <div>
+        </div>
+        <div>
+         
+        </div>
+        <div>
+           
+        </div>
+        <div>
+          
+        </div>
+        <div>
+        </div>
+        <div>
+         
+        </div>
+    </div>
+</div>
+</body>
+</html>
